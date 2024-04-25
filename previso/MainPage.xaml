@@ -1,7 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="previso.MainPage">
+             x:Class="previso.MainPage"
+             Shell.NavBarIsVisible="False">
 
+<Grid>
+    <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>        
+    </Grid.RowDefinitions>
     
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Image Source="diachuv.jpg"
+        Aspect="AspectFill"
+        Grid.RowSpan="5"
+        Grid.ColumnSpan="3"/>
+
+    <Frame Grid.Row="1"
+           Grid.RowSpan="2"
+           Grid.Column="0"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+    <Frame Grid.Row="1"
+           Grid.Column="1"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+    <Frame Grid.Row="2"
+           Grid.Column="1"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+    <Frame Grid.Row="1"
+           Grid.Column="2"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+    <Frame Grid.Row="2"
+           Grid.Column="2"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+    <Frame Grid.Row="5"
+           Grid.ColumnSpan="3"
+           CornerRadius="20"
+           BackgroundColor="#80FFFFFF"
+           Margin="10"/>
+
+</Grid>    
 </ContentPage>
