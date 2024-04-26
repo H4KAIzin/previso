@@ -9,8 +9,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>        
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="200"/>        
     </Grid.RowDefinitions>
     
     <Grid.ColumnDefinitions>
@@ -18,48 +18,345 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
-
-    <Image Source="diachuv.jpg"
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
+    <Image x:Name="Fundo"
         Aspect="AspectFill"
         Grid.RowSpan="5"
         Grid.ColumnSpan="3"/>
 
-    <Frame Grid.Row="1"
-           Grid.RowSpan="2"
-           Grid.Column="0"
-           CornerRadius="20"
-           BackgroundColor="#80FFFFFF"
-           Margin="10"/>
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
 
-    <Frame Grid.Row="1"
-           Grid.Column="1"
-           CornerRadius="20"
-           BackgroundColor="#80FFFFFF"
-           Margin="10"/>
+       <Label x:Name="LabelHora"
+                            FontSize="50"
+                            TextColor="Black"
+                            Margin="10"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
 
-    <Frame Grid.Row="2"
-           Grid.Column="1"
-           CornerRadius="20"
-           BackgroundColor="#80FFFFFF"
-           Margin="10"/>
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
 
-    <Frame Grid.Row="1"
-           Grid.Column="2"
-           CornerRadius="20"
-           BackgroundColor="#80FFFFFF"
-           Margin="10"/>
 
-    <Frame Grid.Row="2"
-           Grid.Column="2"
-           CornerRadius="20"
-           BackgroundColor="#80FFFFFF"
-           Margin="10"/>
 
-    <Frame Grid.Row="5"
+       <Frame x:Name="Frame1"
+              Grid.Row="1"
+              Grid.RowSpan="2"
+              Grid.Column="0"
+              CornerRadius="20"
+              BackgroundColor="#80FFFFFF"
+              Margin="5">
+
+              <VerticalStackLayout>
+
+                                   <Label x:Name="LabelTemperatura"
+                                          TextColor="Black"
+                                          FontSize="45"
+                                          Margin="5,20"
+                                          HorizontalTextAlignment="Center"/>
+
+                                   <Label x:Name="LabelTempo"
+                                          TextColor="Black"
+                                          FontSize="13"
+                                          Margin="5"
+                                          HorizontalTextAlignment="Center"/>
+
+                                   <Label Text="Apucarana, PR"
+                                          TextColor="Black"
+                                          Margin="5,20"
+                                          x:Name="LabelCidade"
+                                          HorizontalTextAlignment="Center"/>
+
+              </VerticalStackLayout>
+                    
+       </Frame>
+
+      <!--///////////////////////////////////////////////////////////////////////////////////// --> 
+
+       <Frame x:Name="Frame2"
+              Grid.Row="1"
+              Grid.Column="1"
+              CornerRadius="20"
+              BackgroundColor="#80FFFFFF"
+              Margin="5">
+
+              <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="110"/>
+                                   <ColumnDefinition Width="40"/>
+                                   </Grid.ColumnDefinitions>
+
+                                   <Label Text="Chuva:"
+                                          TextColor="Black"
+                                          FontSize="15"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          />
+                                   
+                                   <Label TextColor="Black"
+                                          FontSize="15"
+                                          x:Name="LabelChuva"
+                                          Grid.Row="0"
+                                          Grid.Column="1"
+                                          /> 
+
+                                   <Label Text="Humidade:"
+                                          TextColor="Black"
+                                          FontSize="15"
+                                          Grid.Row="1"
+                                          Grid.Column="0"
+                                          />
+
+                                   <Label TextColor="Black"
+                                          FontSize="15"
+                                          x:Name="LabelHumidade"
+                                          Grid.Row="1"
+                                          Grid.Column="1"
+                                          />
+              </Grid>
+       </Frame>
+
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
+
+       <Frame x:Name="Frame3"
+              Grid.Row="2"
+              Grid.Column="1"
+              CornerRadius="20"
+              BackgroundColor="#80FFFFFF"
+              Margin="5">
+
+              <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="30"/>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="95"/>
+                                   <ColumnDefinition Width="70"/>
+                                   </Grid.ColumnDefinitions>
+
+                                   <Label Text="Sol"
+                                          TextColor="Black"
+                                          FontSize="19"
+                                          Margin="30, 5"
+                                          HorizontalTextAlignment="Center"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Amanhecer:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="0"
+                                          Margin="15, 0, 0, 0"/> 
+
+                                   <Label TextColor="Black"
+                                          x:Name="LabelAmanhecer"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="1"
+                                          Margin="0"/>
+
+                                   <Label Text="Anoitecer:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="0"
+                                          Margin="15, 0, 0, 0"/>
+
+                                   <Label TextColor="Black"
+                                          x:Name="LabelAnoitecer"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="1"
+                                          Margin="0"/>
+              </Grid>
+       </Frame>
+
+<!--///////////////////////////////////////////////////////////////////////////////////// -->    
+
+       <Frame x:Name="Frame4"
+              Grid.Row="1"
+              Grid.Column="2"
+              CornerRadius="20"
+              BackgroundColor="#80FFFFFF"
+              Margin="5">
+
+              <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="90"/>
+                                   <ColumnDefinition Width="60"/>
+                                   </Grid.ColumnDefinitions>
+
+                                   <Label Text="Vento"
+                                          TextColor="Black"
+                                          FontSize="19"
+                                          HorizontalTextAlignment="Center"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Força:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Margin="20, 0, 0, 0"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/> 
+
+                                   <Label TextColor="Black"
+                                          x:Name="LabelForca"
+                                          FontSize="14"
+                                          Margin="0"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
+
+                                   <Label Text="Direção:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="0"/>
+
+                                   <Label TextColor="Black"
+                                          x:Name="LabelDirecao"
+                                          FontSize="14"
+                                          Margin="0, 0, 20, 10"
+                                          Grid.Row="2"
+                                          Grid.Column="1"/>
+              </Grid>
+       </Frame>
+    
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
+
+       <Frame x:Name="Frame5"
+              Grid.Row="2"
+              Grid.Column="2"
+              CornerRadius="20"
+              BackgroundColor="#80FFFFFF"
+              Margin="5">
+
+              <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="70"/>
+                                   <ColumnDefinition Width="80"/>
+                                   </Grid.ColumnDefinitions>
+                                   
+                                   <Label Text="Lua"
+                                          TextColor="Black"
+                                          FontSize="19"
+                                          HorizontalTextAlignment="Center"  
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Fase:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/> 
+
+                                   <Label TextColor="Black"
+                                          x:Name="LabelFase"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
+
+              </Grid>
+       </Frame>
+
+<!--///////////////////////////////////////////////////////////////////////////////////// -->
+
+    <Frame x:Name="Frame6"
+           Grid.Row="5"
            Grid.ColumnSpan="3"
            CornerRadius="20"
            BackgroundColor="#80FFFFFF"
-           Margin="10"/>
+           Margin="5">
+
+            <CollectionView>
+                                   <CollectionView.ItemsLayout>
+                                          <LinearItemsLayout Orientation="Horizontal"
+                                                             ItemSpacing="10"/>  
+                                   </CollectionView.ItemsLayout>
+                                   <CollectionView.ItemTemplate>
+                                          <DataTemplate>
+                                                 <Frame BackgroundColor="#FFF"
+                                                        BorderColor="#FFF"
+                                                        CornerRadius="20">
+                                                        <Grid>
+                                                               <Grid.RowDefinitions>
+                                                                      <RowDefinition Height="15"/>
+                                                                      <RowDefinition Height="20"/>
+                                                                      <RowDefinition Height="15"/>
+                                                                      <RowDefinition Height="15"/>
+                                                                      <RowDefinition Height="*"/>
+                                                               </Grid.RowDefinitions>
+                                                               <Grid.ColumnDefinitions>
+                                                                      <ColumnDefinition Width="*"/>
+                                                                      <ColumnDefinition Width="*"/>
+                                                               </Grid.ColumnDefinitions>
+
+                                                               <Label Text="{Binding date}"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="0"
+                                                                      Grid.Column="1"/>
+
+                                                               <Label Text="{Binding weekday}"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="1"
+                                                                      Grid.Column="1"/>
+                                                               
+                                                               <Label Text="Min:"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="2"
+                                                                      Grid.Column="0"/>
+                                                               
+                                                               <Label Text="{Binding min}"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="3"
+                                                                      Grid.Column="1"/>    
+
+                                                               <Label Text="Max:"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="4"
+                                                                      Grid.Column="0"/> 
+
+                                                               <Label Text="{Binding max}"
+                                                                      FontSize="12"
+                                                                      TextColor="#000"
+                                                                      HorizontalOptions="Center"
+                                                                      Grid.Row="4"
+                                                                      Grid.Column="1"/>
+
+                                                               <Image Source="{Binding condition_slug}"/>
+                                                        </Grid>
+                                                 </Frame>
+                                          </DataTemplate>
+                                   </CollectionView.ItemTemplate>
+                            </CollectionView>
+                     </Frame>
 
 </Grid>    
 </ContentPage>
