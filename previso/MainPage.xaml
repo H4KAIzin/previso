@@ -189,8 +189,8 @@
               <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
-                                   <RowDefinition Height="*"/>
-                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="20"/>
+                                   <RowDefinition Height="27"/>
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="90"/>
@@ -246,11 +246,11 @@
               <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
-                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="40"/>
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="70"/>
-                                   <ColumnDefinition Width="80"/>
+                                   <ColumnDefinition Width="70"/>
                                    </Grid.ColumnDefinitions>
                                    
                                    <Label Text="Lua"
@@ -285,7 +285,10 @@
            BackgroundColor="#80FFFFFF"
            Margin="5">
 
-            <CollectionView>
+            <<CollectionView x:Name="listafcast"
+                                            Margin="0"
+                                            HorizontalOptions="Fill"
+                                            VerticalOptions="Fill">
                                    <CollectionView.ItemsLayout>
                                           <LinearItemsLayout Orientation="Horizontal"
                                                              ItemSpacing="10"/>  
@@ -294,8 +297,10 @@
                                           <DataTemplate>
                                                  <Frame BackgroundColor="#FFF"
                                                         BorderColor="#FFF"
+                                                        VerticalOptions="Fill"
                                                         CornerRadius="20">
-                                                        <Grid>
+                                                        <Grid VerticalOptions="Center"
+                                                              HorizontalOptions="Center">
                                                                <Grid.RowDefinitions>
                                                                       <RowDefinition Height="15"/>
                                                                       <RowDefinition Height="20"/>
@@ -304,23 +309,25 @@
                                                                       <RowDefinition Height="*"/>
                                                                </Grid.RowDefinitions>
                                                                <Grid.ColumnDefinitions>
-                                                                      <ColumnDefinition Width="*"/>
+                                                                      <ColumnDefinition Width="30"/>
                                                                       <ColumnDefinition Width="*"/>
                                                                </Grid.ColumnDefinitions>
 
                                                                <Label Text="{Binding date}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
-                                                                      HorizontalOptions="Center"
+                                                                      HorizontalTextAlignment="Center"
                                                                       Grid.Row="0"
-                                                                      Grid.Column="1"/>
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
 
                                                                <Label Text="{Binding weekday}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
                                                                       Grid.Row="1"
-                                                                      Grid.Column="1"/>
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
                                                                
                                                                <Label Text="Min:"
                                                                       FontSize="12"
@@ -333,30 +340,32 @@
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="3"
+                                                                      Grid.Row="2"
                                                                       Grid.Column="1"/>    
 
                                                                <Label Text="Max:"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="4"
+                                                                      Grid.Row="3"
                                                                       Grid.Column="0"/> 
 
                                                                <Label Text="{Binding max}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="4"
+                                                                      Grid.Row="3"
                                                                       Grid.Column="1"/>
 
-                                                               <Image Source="{Binding condition_slug}"/>
+                                                               <Image Source="{Binding condition}"
+                                                                      Grid.Row="4"
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
                                                         </Grid>
                                                  </Frame>
                                           </DataTemplate>
                                    </CollectionView.ItemTemplate>
                             </CollectionView>
                      </Frame>
-
 </Grid>    
 </ContentPage>

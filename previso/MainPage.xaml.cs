@@ -24,7 +24,7 @@ public partial class MainPage : ContentPage
 		}
 
 		catch(Exception e){
-			System.Diagnostics.Debug.WriteLine(e);
+			System.Diagnostics.Debug.WriteLine("//ERROR");
 		}
 
 		PreencherTela();
@@ -32,6 +32,9 @@ public partial class MainPage : ContentPage
 	
 
 	void PreencherTela(){
+
+		listafcast.ItemsSource = resposta.results.forecast;
+
 		LabelTemperatura.Text = resposta.results.temp + "ºC".ToString();
 		LabelHumidade.Text = resposta.results.humidity.ToString();
 		
@@ -57,6 +60,7 @@ public partial class MainPage : ContentPage
 		string city = "Apucarana";
 		string wind_cardinal = "NE";
 		string moon_phase = "Minguante";
+		string condition = "";
 
 		double cloudiness = 30;
 		double rain = 11;	

@@ -23,9 +23,6 @@ public partial class Results
     public double cloudiness {get; set;} // Nublado
     public double rain {get; set;} // Chuva
       
-
-	public Results()
-	{
-		
-	}
+    public List<fcast> forecast {get; set;}
+	
 }
